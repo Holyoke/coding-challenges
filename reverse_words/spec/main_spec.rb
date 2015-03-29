@@ -56,5 +56,10 @@ describe "#reverse_words" do
 	context "Sample Cases Files" do
 		let(:sample_input) { File.read("spec/sample_input.txt") }
 		let(:sample_output) { File.read("spec/sample_output.txt")}
+
+		describe "Sample Input" do
+			it "passes the first sample test"
+			it "passes the second sample test"
+		end
 	end
 end
