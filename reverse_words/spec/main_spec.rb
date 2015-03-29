@@ -5,8 +5,7 @@ require "byebug"
 describe "#reverse_words" do
 
 	context "Test Case 1 Analysis" do
-		let(:input) { "One Two Three"}
-
+		
 		it "swaps characters around" do
 			str = "abc"
 			answer = "cba"
@@ -27,10 +26,10 @@ describe "#reverse_words" do
 
 
 		it "reverses sentance" do
-			str = input
-			answer = "eerhT owT enO"
+			str = "One Two Three"
+			answer = "Three Two One"
 
-			reverse_sentance(str)
+			reverse_sentence(str)
 
 			expect(str).to eq(answer)			
 		end

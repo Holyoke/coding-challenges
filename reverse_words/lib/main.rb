@@ -1,10 +1,23 @@
 require "byebug"
 require "set"
 
-def reverse_words(str)
+def reverse_sentence(str)
+	reverse_word(str)
 
+	front = 0
+	0.upto(str.size) do |x|
+		if str[x] == " "
+			reverse_word(str[front..x])
+			front = x
+			byebug
+		end
+	end
 	nil
 end
+
+# eerhT owT enO
+
+
 
 def reverse_word(str)
 	0.upto(str.length / 2 - 1) do |x|
