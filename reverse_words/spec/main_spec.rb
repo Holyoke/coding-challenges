@@ -11,7 +11,7 @@ describe "#reverse_words" do
 			str = "abc"
 			answer = "cba"
 
-			swap(str,0,2)
+			swap(str, 0, 2)
 
 			expect(str).to eq(answer)
 		end

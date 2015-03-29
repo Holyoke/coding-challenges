@@ -5,9 +5,9 @@ def reverse_words(str)
 end
 
 def reverse_word(str)
-	0.upto(str.length / 2) do |i|
-		front = i
-		back = str.length - i
+	0.upto(str.length / 2 - 1) do |x|
+		front = x
+		back = str.length - x - 1
 
 		swap(str, front, back)
 	end
