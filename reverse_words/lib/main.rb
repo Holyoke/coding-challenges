@@ -36,6 +36,6 @@ def reverse_word(str, i = 0, j = str.length - 1)
 end
 
 def swap(str, i, j)
-	str[i],str[j] = str[j],str[i]
+	str[i], str[j] = str[j], str[i]
 	nil
 end

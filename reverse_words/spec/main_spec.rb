@@ -58,8 +58,18 @@ describe "#reverse_words" do
 		let(:sample_output) { File.read("spec/sample_output.txt")}
 
 		describe "Sample Input" do
-			it "passes the first sample test"
-			it "passes the second sample test"
+			it "passes the first sample test" do 
+				input = sample_input.split("\n")[0]
+				output = sample_output("\n")[0]
+
+				reverse_sentence(input)
+
+				expect(input).to eq(output)
+
+			end
+
+			it "passes the second sample test" do 
+			end
 		end
 	end
 end
