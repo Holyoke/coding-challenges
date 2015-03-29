@@ -5,7 +5,7 @@ require "byebug"
 describe "#reverse_words" do
 
 	context "Test Case 1 Analysis" do
-		
+
 		it "swaps characters around" do
 			str = "abc"
 			answer = "cba"
@@ -20,6 +20,15 @@ describe "#reverse_words" do
 			answer = "dcba"
 
 			reverse_word(str)
+
+			expect(str).to eq(answer)
+		end
+
+		it "reverses a portion of a word" do 
+			str = "abcdef"
+			answer = "abcfed"
+
+			reverse_word(str, 3, 5)
 
 			expect(str).to eq(answer)
 		end
