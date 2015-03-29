@@ -29,6 +29,44 @@ describe "#self_describing_numbers" do
 
 	end
 
+	context "Test '471379' analysis" do
+		let(:input) { "471379" }
+
+		it "matches description?" do
+			answer = { 
+				"0" => 4,
+				"1" => 7,
+				"2" => 1,
+				"3" => 3,
+				"4" => 7,
+				"5" => 9 }
+
+			result = position_count(input)
+			expect(result).to eq(answer)
+
+		end
+	end
+
+	context "Test '6210001000' analysis" do
+		let(:input) { "6210001000" }
+
+		it "matches description?" do
+			answer = { 
+				"0" => 4,
+				"1" => 7,
+				"2" => 1,
+				"3" => 3,
+				"4" => 7,
+				"5" => 9 }
+
+			result = position_count(input)
+
+			expect(result).to eq(answer)
+
+		end
+	end
+
+
 
 	context "Sample Cases Files" do
 		let(:sample_input) { File.read("spec/sample_input.txt") }
