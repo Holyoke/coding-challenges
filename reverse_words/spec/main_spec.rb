@@ -11,12 +11,19 @@ describe "#reverse_words" do
 			str = "abc"
 			answer = "cba"
 
-			result = swap(str,0,2)
+			swap(str,0,2)
 
-			expect(result).to eq(answer)
+			expect(str).to eq(answer)
 		end
 
-		it "reverses a word"
+		it "reverses a word" do 
+			str = "abcd"
+			answer = "dcba"
+
+			reverse_word(str)
+
+			expect(str).to eq(answer)
+		end
 
 
 		it "reverses sentance"
