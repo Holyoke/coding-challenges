@@ -5,18 +5,21 @@ def reverse_sentence(str)
 	reverse_word(str)
 
 	front = 0
-	0.upto(str.size) do |x|
+
+	0.upto(str.size - 1) do |x|
 		if str[x] == " "
 			reverse_word(str, front, x - 1)
-			front = x
+			front = x + 1
+		end
+
+		if str[x + 1].nil?
+			reverse_word(str, front, x)
 		end
 	end
 	nil
 end
 
 # eerhT owT enO
-
-
 
 def reverse_word(str, i = 0, j = str.length - 1)
 	mid = i + ((j - i) / 2)

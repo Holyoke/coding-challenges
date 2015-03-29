@@ -24,11 +24,20 @@ describe "#reverse_words" do
 			expect(str).to eq(answer)
 		end
 
-		it "reverses a portion of a word" do 
+		it "reverses a portion of a word 1" do 
 			str = "abcdef"
 			answer = "abcfed"
 
 			reverse_word(str, 3, 5)
+
+			expect(str).to eq(answer)
+		end
+
+		it "reverses a portion of a word 2" do 
+			str = "abcdef"
+			answer = "aedcbf"
+
+			reverse_word(str, 1, 4)
 
 			expect(str).to eq(answer)
 		end
