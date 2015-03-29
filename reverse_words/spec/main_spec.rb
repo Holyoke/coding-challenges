@@ -26,7 +26,14 @@ describe "#reverse_words" do
 		end
 
 
-		it "reverses sentance"
+		it "reverses sentance" do
+			str = input
+			answer = "eerhT owT enO"
+
+			reverse_sentance(str)
+
+			expect(str).to eq(answer)			
+		end
 	end
 
 	context "Sample Cases Files" do
