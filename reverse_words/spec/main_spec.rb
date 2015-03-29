@@ -5,6 +5,13 @@ require "byebug"
 describe "#reverse_words" do
 
 	context "Test Case 1 Analysis" do
+		let(:input) { "One Two Three"}
+
+		it "reverses a word"
+
+		it "swaps out characters"
+
+		it "reverses sentance"
 	end
 
 	context "Sample Cases Files" do
