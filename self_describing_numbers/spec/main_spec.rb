@@ -37,14 +37,29 @@ describe "#self_describing_numbers" do
 		it "passes sample test 1 " do
 
 			input = sample_input.split("\n")[0]
-			output = self_describing_numbers(output)
 			answer = sample_output.split("\n")[0]
+
+			output = self_describing_numbers(input)
 
 			expect(output).to  eq(answer)
 		end
 
-		it "passes sample test 2"
+		it "passes sample test 2" do
+			input = sample_input.split("\n")[1]
+			answer = sample_output.split("\n")[1]
 
-		it "passes sample test 3"
+			output = self_describing_numbers(input)
+
+			expect(output).to  eq(answer)
+		end
+
+		it "passes sample test 3" do
+			input = sample_input.split("\n")[2]
+			answer = sample_output.split("\n")[2]
+
+			output = self_describing_numbers(input)
+
+			expect(output).to  eq(answer)
+		end
 	end
 end
