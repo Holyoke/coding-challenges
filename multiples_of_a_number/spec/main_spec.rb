@@ -14,20 +14,22 @@ describe "#multiples_of_a_number" do
 		describe "Sample Input Tests" do
 			it "passes the first sample test" do 
 				input = sample_input.split("\n")[0]
-				output = sample_output.split("\n")[0]
+				output = sample_output.split("\n")[0].to_i
 
-				reverse_sentence(input)
+				result = multiples_of_a_number(input)
 
-				expect(input).to eq(output)
+
+				expect(result).to eq(output)
 			end
 
 			it "passes the second sample test" do 
 				input = sample_input.split("\n")[1]
-				output = sample_output.split("\n")[1]
+				output = sample_output.split("\n")[1].to_i
 
-				reverse_sentence(input)
+				result = multiples_of_a_number(input)
 
-				expect(input).to eq(output)
+
+				expect(result).to eq(output)
 			end
 
 		end
