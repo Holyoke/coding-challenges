@@ -2,21 +2,9 @@ require "rspec"
 require "main.rb"
 require "byebug"
 
-describe "#number_of_ones" do
+describe "#method" do
 
 	context "Test Case 1 Analysis" do
-		it "converts 10 to binary" do 
-			num = 10
-			answer = "1010"
-			result = decimal_to_binary(num)
-
-			expect(result).to eq(answer)
-
-		end
-
-		it "counts 1's of a binary number"
-
-		it "counts the number of 1's in 10 to binary"
 	end
 
 	context "Sample Input" do
@@ -31,7 +19,7 @@ describe "#number_of_ones" do
 				# result = multiples_of_a_number(input)
 
 
-				# expect(result).to eq(output)
+				expect(result).to eq(output)
 			end
 
 			it "passes the second sample test" do 
@@ -41,7 +29,7 @@ describe "#number_of_ones" do
 				# result = multiples_of_a_number(input)
 
 
-				# expect(result).to eq(output)
+				expect(result).to eq(output)
 			end
 
 		end
