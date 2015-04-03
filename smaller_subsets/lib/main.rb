@@ -12,9 +12,11 @@ def subsets_pancham(array)
 
 	smaller_set = array.take(array.count - 1)
 	smaller_subsets = subsets(smaller_set)
+
 	bigger_subsets = []
-	smaller_subsets.each do |smaller_subset|
-		bigger_subsets << smaller_subset + [array.last] 
+
+	smaller_subsets.each do |set|
+		bigger_subsets << set + [array.last] 
 	end
 
 	smaller_subsets + bigger_subsets
