@@ -5,6 +5,25 @@ require "byebug"
 describe "#method" do
 
 	context "Test Case 1 Analysis" do
+
+
+		it "builds a hash map of words first and final letters" do
+			input = %w{abc, cde, efg}
+			answer = { "abc" => "cde", "cde" => "efg", "efg" => nil}
+
+			result = build_hash_chain(input)
+
+			expect(result).to eq(answer)
+		end
+
+		it "finds the count of the longest path" do
+			input = %w{ soup,sugar,peas,rice }
+			answer = 4
+
+			result = word_chain_simple(input)
+
+			expect(result).to eq(answer)
+		end
 	end
 
 	context "Sample Input" do
