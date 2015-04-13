@@ -43,7 +43,7 @@ describe "#reverse_words" do
 		end
 
 
-		it "reverses sentance" do
+		it "reverses sentence" do
 			str = "One Two Three"
 			answer = "Three Two One"
 

@@ -26,8 +26,24 @@ describe("Reverse Words", function() {
 		var answer = "abcfed"
 
 
-  	expect(ReverseWords.reverseStr(str)).toBe(answer);
+  	expect(ReverseWords.reverseStr2(str, 3, 5)).toBe(answer);
   });
+
+  it("reverses a portion of the word 1", function() {
+		var str = "abcdef"
+		var answer = "aedcbf"
+
+
+  	expect(ReverseWords.reverseStr2(str, 1, 4)).toBe(answer);
+  });
+
+  it("reverses a sentence", function() {
+		var str = "abcdef"
+		var answer = "aedcbf"
+
+
+  	expect(ReverseWords.reverseStr2(str, 1, 4)).toBe(answer);
+  });  
 
 
 });

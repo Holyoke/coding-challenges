@@ -25,6 +25,16 @@
     return result;
   };
 
+  ReverseWords.reverseStr2 = function (str, i, j) {
+    var result = "";
+    var i;
+    for(i = str.length; i > 0; i--){
+      result += str[i - 1];
+    }
+
+    return result;
+  };
+
 
 
 })();
