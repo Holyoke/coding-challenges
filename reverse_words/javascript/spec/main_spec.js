@@ -29,7 +29,7 @@ describe("Reverse Words", function() {
   	expect(ReverseWords.reverseStr2(str, 3, 5)).toBe(answer);
   });
 
-  it("reverses a portion of the word 1", function() {
+  it("reverses a portion of the word 2", function() {
 		var str = "abcdef"
 		var answer = "aedcbf"
 
@@ -38,11 +38,11 @@ describe("Reverse Words", function() {
   });
 
   it("reverses a sentence", function() {
-		var str = "abcdef"
-		var answer = "aedcbf"
+		var str = "One Two Three"
+		var answer = "Three Two One"
 
 
-  	expect(ReverseWords.reverseStr2(str, 1, 4)).toBe(answer);
+  	expect(ReverseWords.reverseSentence(str)).toBe(answer);
   });  
 
 

@@ -6,7 +6,7 @@
   }
 
   ReverseWords.swap = function (str, i, j) {
-    result = str.split("");
+    var result = str.split("");
 
     var tmp = result[i];
     result[i] = result[j];
@@ -26,13 +26,17 @@
   };
 
   ReverseWords.reverseStr2 = function (str, i, j) {
-    var result = "";
-    var i;
-    for(i = str.length; i > 0; i--){
-      result += str[i - 1];
-    }
+    var left, mid, right;
 
-    return result;
+    left = str.slice(0, i);
+    mid = this.reverseStr(str.slice(i, j + 1));
+    right = str.slice(j + 1, str.length);
+
+    return left+mid+right;
+  };
+
+  ReverseWords.reverseSentence = function (str) {
+    var result = 
   };
 
 
