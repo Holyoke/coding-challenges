@@ -21,6 +21,14 @@ describe("Reverse Words", function() {
   	expect(ReverseWords.reverseStr(str)).toBe(answer);
   });
 
+  it("reverses a portion of the word 1", function() {
+		var str = "abcdef"
+		var answer = "abcfed"
+
+
+  	expect(ReverseWords.reverseStr(str)).toBe(answer);
+  });
+
 
 });
 
