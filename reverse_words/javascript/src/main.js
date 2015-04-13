@@ -36,7 +36,27 @@
   };
 
   ReverseWords.reverseSentence = function (str) {
-    var result = 
+    var result = "";
+
+    var back = str.length;
+    back--;
+
+    var probe = back; 
+    var sub; 
+
+    for(back; back >= 0; back--){
+      if (str[back] === " " ) {
+        sub = str.slice(back + 1, probe + 1);
+        result += sub + " ";
+        probe = back;
+      }
+
+      if (back === 0) {
+        result = result.slice(0, result.length - 1)
+        result += str.slice(back, probe);
+      }
+    }
+    return result;
   };
 
 
