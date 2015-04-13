@@ -14,6 +14,13 @@ describe("Reverse Words", function() {
   	expect(ReverseWords.swap(str, 0 ,2)).toBe(answer);
   });
 
+  it("reverses a word", function() {
+  	var str = "abcd";
+  	var answer = "dcba";
+
+  	expect(ReverseWords.reverseStr(str)).toBe(answer);
+  });
+
 
 });
 
