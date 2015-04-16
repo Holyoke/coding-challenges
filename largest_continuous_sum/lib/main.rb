@@ -10,8 +10,17 @@ def kadane(arr)
 		num = arr[x]
 		current_sum += num
 
-		current_sum = [current_sum, num].max
-		max_sum = [current_sum, max_sum].max
+		# current_sum = [current_sum, num].max
+		if (current_sum < num) 
+			current_sum = num
+		end
+		# max_sum = [current_sum, max_sum].max
+
+		if (max_sum < current_sum)
+			max_sum = current_sum
+		end
+
+		max_sum
 	end
 
 	max_sum
