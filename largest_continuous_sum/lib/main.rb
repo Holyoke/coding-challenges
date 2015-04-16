@@ -20,6 +20,7 @@ end
 def prakash_largest_continuous_sum(arr)
 	return if arr.empty?
 
+	#set to 
 	max_sum = current_sum = arr.first
 
 	start = tstart = back = 0
