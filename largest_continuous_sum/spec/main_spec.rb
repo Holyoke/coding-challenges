@@ -12,7 +12,9 @@ describe "#method" do
 			expect(kadane(arr)).to eq(answer)
 		end
 
-		it "should find the largest continuous sum with indexes"
+		it "should find the largest continuous sum with indexes" do
+			arr = []
+		end
 	end
 
 end
