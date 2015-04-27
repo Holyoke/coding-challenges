@@ -91,6 +91,29 @@ def max_range_sum_02(period, prices)
 	max_profit
 end
 
+def max_range_sum_03(input)
+	period, prices = input.split(";")
+	period = period.to_i
+	prices = prices.split.map{|c| c.to_i}
+
+	max_profit = 0
+	sum = 0
+
+	prices.each_with_index do |price, idx|
+		if idx < period
+			sum += price
+		else
+			sum += price
+			sum -= prices[idx - period]
+			current_streak = prices[idx - period + 1, period]
+			max_profit = [max_profit, sum].max
+		end
+
+	end
+
+	max_profit.to_s
+end
+
 
 
 def get_streaks(period, prices)
@@ -108,8 +131,8 @@ end
 
 
 
-input = %w{7 -3 -10 4 2 8 -2 4 -5 -2}.map { |c| c.to_i }
+# input = %w{7 -3 -10 4 2 8 -2 4 -5 -2}.map { |c| c.to_i }
 
-max_range_sum_02(5, input).each do |k,v|
-	puts "#{k}, #{v}"
-end
+# max_range_sum_02(5, input).each do |k,v|
+# 	puts "#{k}, #{v}"
+# end

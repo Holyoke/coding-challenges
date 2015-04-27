@@ -26,14 +26,28 @@ describe "#max_sum_range" do
 
 		describe "Sample Input Tests" do
 			it "passes the first sample test" do 
-				input = sample_input.split("\n")[0].split(";")
+				input = sample_input.split("\n")[0]
 				output = sample_output.split("\n")[0]
 
-				result = max_range_sum(input)
+				result = max_range_sum_03(input)
 				expect(result).to eq(output)
 			end
 
-			it "passes the second sample test"
+			it "passes the second sample test" do 
+				input = sample_input.split("\n")[1]
+				output = sample_output.split("\n")[1]
+
+				result = max_range_sum_03(input)
+				expect(result).to eq(output)
+			end
+
+			it "passes the third sample test" do 
+				input = sample_input.split("\n")[2]
+				output = sample_output.split("\n")[2]
+
+				result = max_range_sum_03(input)
+				expect(result).to eq(output)
+			end
 
 
 		end
