@@ -49,6 +49,14 @@ describe "#max_sum_range" do
 				expect(result).to eq(output)
 			end
 
+			it "passes this test" do 
+				input = "26;-93 -94 26 -77 -91 -31 -56 -13 55 -3 16 44 89 -52 -29 63 -29 51 91 -41 73 -52 75 86 68 3 47 -80 -43 -95 57"
+				answer = "325"
+
+				result = max_range_sum_03(input)
+				expect(result).to eq(answer)
+			end
+
 
 		end
 	end

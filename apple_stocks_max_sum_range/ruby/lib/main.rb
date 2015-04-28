@@ -102,6 +102,8 @@ def max_range_sum_03(input)
 	prices.each_with_index do |price, idx|
 		if idx < period
 			sum += price
+		elsif idx == 30
+			byebug
 		else
 			sum += price
 			sum -= prices[idx - period]
@@ -111,28 +113,42 @@ def max_range_sum_03(input)
 
 	end
 
+	max_profit = 0 if max_profit < 0
+
 	max_profit.to_s
 end
 
 
 
-def get_streaks(period, prices)
+def get_streaks(input)
+	period, prices = input.split(";")
+	period = period.to_i
+	prices = prices.split.map{|c| c.to_i}
+
 	streaks = Hash.new(0)
 	prices.each_with_index do |price, idx|
 		break if idx + period > prices.size
 		streak = prices[idx + 1,period]
 		sum = streak.inject(:+)
 
-		streaks[streak] = sum
+		if sum.nil?
+			streaks[streak] = 0
+		end
+
+		streaks[streak] = sum unless sum.nil?
 	end
 
-	streaks
+	streaks.values.max
 end
 
-
-
-# input = %w{7 -3 -10 4 2 8 -2 4 -5 -2}.map { |c| c.to_i }
-
-# max_range_sum_02(5, input).each do |k,v|
+input = "26;-93 -94 26 -77 -91 -31 -56 -13 55 -3 16 44 89 -52 -29 63 -29 51 91 -41 73 -52 75 86 68 3 47 -80 -43 -95 57"
+edge = "1;-5 -4 -3 -1 0"
+# max_range_sum_03(input)
+# get_streaks(edge).each do |k,v|
 # 	puts "#{k}, #{v}"
 # end
+
+p get_streaks(input)
+p get_streaks(edge)
+
+
