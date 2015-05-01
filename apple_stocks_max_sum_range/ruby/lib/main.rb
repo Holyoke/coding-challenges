@@ -102,8 +102,6 @@ def max_range_sum_03(input)
 	prices.each_with_index do |price, idx|
 		if idx < period
 			sum += price
-		elsif idx == 30
-			byebug
 		else
 			sum += price
 			sum -= prices[idx - period]
@@ -131,24 +129,26 @@ def get_streaks(input)
 		streak = prices[idx + 1,period]
 		sum = streak.inject(:+)
 
-		if sum.nil?
+		if sum.nil? || sum < 0
 			streaks[streak] = 0
 		end
 
 		streaks[streak] = sum unless sum.nil?
 	end
 
-	streaks.values.max
+	answer = streaks.values.max 
+
+	answer = answer < 0 ? "0" : answer.to_s 
 end
 
-input = "26;-93 -94 26 -77 -91 -31 -56 -13 55 -3 16 44 89 -52 -29 63 -29 51 91 -41 73 -52 75 86 68 3 47 -80 -43 -95 57"
-edge = "1;-5 -4 -3 -1 0"
-# max_range_sum_03(input)
-# get_streaks(edge).each do |k,v|
-# 	puts "#{k}, #{v}"
-# end
+# input = "26;-93 -94 26 -77 -91 -31 -56 -13 55 -3 16 44 89 -52 -29 63 -29 51 91 -41 73 -52 75 86 68 3 47 -80 -43 -95 57"
+# edge = "1;-5 -4 -3 -1 0"
+# # max_range_sum_03(input)
+# # get_streaks(edge).each do |k,v|
+# # 	puts "#{k}, #{v}"
+# # end
 
-p get_streaks(input)
-p get_streaks(edge)
+# p get_streaks(input)
+# p get_streaks(edge)
 
 
