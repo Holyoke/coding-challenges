@@ -4,34 +4,20 @@ require "byebug"
 
 describe "#method" do
 
-	context "Test Case 1 Analysis" do
-	end
+	context "Analysis" do
+		it "determines palindromes" do
+			input = "civic"
 
-	context "Sample Input" do
-		let(:sample_input) { File.read("spec/sample_input.txt") }
-		let(:sample_output) { File.read("spec/sample_output.txt")}
+			expect(is_palindrome?(input)).to eq(true)
+		end
 
-		describe "Sample Input Tests" do
-			it "passes the first sample test" do 
-				input = sample_input.split("\n")[0]
-				output = sample_output.split("\n")[0].to_i
+		it "doesn't determines palindromes" do
+			input = "civac"
 
-				# result = multiples_of_a_number(input)
+			expect(is_palindrome?(input)).to eq(false)
+		end
 
-
-				expect(result).to eq(output)
-			end
-
-			it "passes the second sample test" do 
-				input = sample_input.split("\n")[1]
-				output = sample_output.split("\n")[1].to_i
-
-				# result = multiples_of_a_number(input)
-
-
-				expect(result).to eq(output)
-			end
-
+		it "checks for parity" do
 		end
 	end
 end
