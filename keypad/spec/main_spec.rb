@@ -5,15 +5,80 @@ require "byebug"
 describe "#keypad_translate" do
 
 	context "Encodes numbers to the International Standard" do
-		it "confirms 222 is 'abc'"
-		it "confirms 333 is 'def'"
-		it "confirms 444 is 'ghi'"
-		it "confirms 555 is 'jkl'"
-		it "confirms 666 is 'mno'"
-		it "confirms 777 is 'pqrs'"
-		it "confirms 888 is 'tuv'"
-		it "confirms 999 is 'wxys''"
-		it "confirms 0 is space"
+		it "confirms 222 is 'abc'" do
+			number = '222'
+			word = 'abc'
+
+			result = keypad_word?(number, word)
+			expect(result).to eq(true)
+		end
+
+		it "confirms 333 is 'def'" do
+			number = '333'
+			word = 'def'
+
+			result = keypad_word?(number, word)
+			expect(result).to eq(true)
+		end
+
+		it "confirms 444 is 'ghi'" do
+			number = '444'
+			word = 'ghi'
+
+			result = keypad_word?(number, word)
+			expect(result).to eq(true)
+		end
+
+		it "confirms 555 is 'jkl'" do
+			number = '555'
+			word = 'jkl'
+
+			result = keypad_word?(number, word)
+			expect(result).to eq(true)
+		end
+
+		it "confirms 666 is 'mno'" do
+			number = '666'
+			word = 'mno'
+
+			result = keypad_word?(number, word)
+			expect(result).to eq(true)
+		end
+
+		it "confirms 7777 is 'pqrs'" do
+			number = '7777'
+			word = 'pqrs'
+
+			result = keypad_word?(number, word)
+			expect(result).to eq(true)
+		end
+
+		it "confirms 888 is 'tuv'" do
+			number = '888'
+			word = 'tuv'
+
+			result = keypad_word?(number, word)
+			expect(result).to eq(true)
+		end
+
+		it "confirms 9999 is 'wxyz''" do
+			number = '9999'
+			word = 'wxyz'
+
+			result = keypad_word?(number, word)
+			expect(result).to eq(true)
+		end
+		it "confirms 0 is space" do
+			number = '0'
+			word = ' '
+
+			result = keypad_word?(number, word)
+			expect(result).to eq(true)
+		end
+	end
+
+	context "Word Confirmation" do
+		it "confirms 43556 "
 	end
 
 	# context "Sample Input" do
