@@ -3,5 +3,5 @@ require "set"
 
 
 def myShuffle(arr)
-
+  arr
 end

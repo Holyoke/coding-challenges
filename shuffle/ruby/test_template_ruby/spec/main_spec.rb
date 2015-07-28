@@ -12,7 +12,4 @@ describe "#myShuffle" do
 			expect(myShuffle(input)).to_not equal(input)
 		end
 	end
-
-	context "Sample Input" do
-	end
 end
