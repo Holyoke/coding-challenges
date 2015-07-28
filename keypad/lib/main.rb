@@ -12,7 +12,6 @@ CODEX = {
    " " => '0'
 }
 
-# test = File.read("spec/test_input.txt").split("\n")
 
 def keypad_word?(numbers, word)
   str = ""

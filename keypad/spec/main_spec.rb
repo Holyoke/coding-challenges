@@ -78,7 +78,21 @@ describe "#keypad_translate" do
 	end
 
 	context "Word Confirmation" do
-		it "confirms 43556 "
+		it "confirms 43556 is hello" do
+			number = '43556'
+			word = 'hello'
+
+			result = keypad_word?(number, word)
+			expect(result).to eq(true)
+		end
+
+		it "confirms 43506 is hel o" do
+			number = '43506'
+			word = 'hel o'
+
+			result = keypad_word?(number, word)
+			expect(result).to eq(true)
+		end
 	end
 
 	# context "Sample Input" do
